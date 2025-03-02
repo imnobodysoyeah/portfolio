@@ -1,197 +1,298 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TM Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tori Mayhall</title>
     </head>
     <body>
         <header>
-            <h1>Tori Mayhall's Portfolio</h1>
+            <h1>Tori Mayhall</h1>
             <!-- Nav bar -->
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-
-        <!-- About section -->
-        <section id="about">
-            <!-- Image of myself -->
-            <img src="images/self_image.JPG" alt="Tori Mayhall" class="featured-image">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! This is where you will find a little bit of information on my professional work. I'm a dynamic computer science student with a passion for web development and a keen interest in artificial intelligence. My journey into the world of technology began with a fascination for sound engineering, fueled by my love for music as a guitarist, drummer, and music producer. However, it was my encounters in with the ever-evolving challenges of web development that ultimately drew me into the realm of computer science. Through this portfolio, I invite you to explore my projects, from innovative website creations to impactful AI endeavors, showcasing my dedication to pushing boundaries and making a meaningful impact in the world of technology.</p>
-        </section>
-
-        <!-- Portfolio section -->
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <center>
-            <!-- Filters -->
-            <div id="filter-controls">
-                <button class="filter-btn" data-filter="all">Show All</button>
-                <button class="filter-btn" data-filter="work-history">Work History</button>
-                <button class="filter-btn" data-filter="projects">Projects</button>
-                <button class="filter-btn" data-filter="research">Research</button>
-            </div>
-            <div id="portfolio-items">
-            <!-- The items will go here with the script -->
-            </div>
-            </center>
-        </section>
-
-        <!-- Contact section -->
-        <section id="contact">
-            <h2>Contact Me</h2> 
-            <p> For more information, feel free to reach out to me with any questions you may have.</p>
-            <p>You can reach me via email at <a href="mailto:mayhallvictoria@gmail.com">mayhallvictoria@gmail.com</a></p>
-        </section>
-
-        <!-- Copyright? footer idk what to put in the footer -->
+    
+        <div class="container">
+            <!-- About section -->
+            <section id="about">
+                <img src="images/self_image.JPG" alt="Tori Mayhall" class="featured-image">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I'm a dynamic computer science graduate with a passion for web development and an interest in artificial intelligence. My journey into the world of technology began with a fascination for sound engineering, fueled by my love for music as a guitarist, drummer, and music producer. However, it was my encounters in with the ever-evolving challenges of web development that ultimately drew me into the realm of computer science. Through this portfolio, I invite you to explore my projects, from innovative website creations to impactful AI endeavors, showcasing my dedication to pushing boundaries and making a meaningful impact in the world of technology.</p>
+            </section>
+        </div>
+    
+        <div class="container">
+            <!-- Work section -->
+            <section id="work">
+                <h2>Work</h2>
+                <center>
+                    <!-- Filters -->
+                    <div>
+                        <button class="filter-btn" data-filter="all">Show All</button>
+                        <button class="filter-btn" data-filter="work-history">Work History</button>
+                        <button class="filter-btn" data-filter="projects">Projects</button>
+                        <button class="filter-btn" data-filter="research">Research</button>
+                    </div>
+                    <div id="work-items">
+                        <!-- The items will go here with the script -->
+                    </div>
+                </center>
+            </section>
+        </div>
+    
+        <div class="container">
+            <!-- Contact section -->
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>For more information, feel free to reach out to me with any questions you may have.</p>
+                <p>You can reach me via email at <a href="mailto:mayhallvictoria@gmail.com">mayhallvictoria@gmail.com</a></p>
+            </section>
+        </div>
+    
         <footer>
-            <p>Victoria Mayhall's Portfolio 2024 ©</p>
+            <div class="copyright">Tori Mayhall's Portfolio 2024 ©</div>
         </footer>
     </body>
+    
 </html>
 
 <style>
-    /* Styling for the content */
+    /* General Styles */
     body, html {
-    margin: 0;
-    padding: 0;
-    border-bottom: 20;
-    font-family: Arial, sans-serif;
-    margin-bottom: 80px;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        margin-bottom: 80px;
+        margin-top: 75px;
     }
 
-    /* Header color and center */
+    /* Header */
     header {
-        background: #ff0000;
+        background: rgba(211, 13, 13, 0.917);
+        backdrop-filter: blur(10px);
         color: #fff;
-        padding: 10px 20px;
         text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
-    /* Nav bar width */
+    /* Navigation */
     nav ul {
         list-style: none;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
-    /* Nav bar item width */
     nav ul li {
-        display: inline;
-        margin-right: 10px;
+        padding: 10px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(250, 50, 50, 0.6), rgba(250, 95, 95, 0.606));
+        border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
-    /* Nav bar text color */
     nav ul li a {
-    color: white;
-    text-decoration: none;
+        color: white;
+        text-decoration: none;
     }
 
-    /* Spacing for sections */
+    /* Sections */
     section {
         padding: 20px;
         margin: 10px;
+        scroll-margin-top: 150px;
     }
 
-    /* Spacing and sizing for portfolio items */
-    #portfolio-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    /* Container */
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px auto;
+        background: radial-gradient(rgba(220, 213, 213, 0.384), rgba(116, 115, 115, 0.384));
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
     }
 
-    /* Filter buttons' styling */
+
+    /* Filter Buttons */
     .filter-btn {
         margin: 5px;
         padding: 10px;
         cursor: pointer;
+        border-radius: 14px;
+        color: white;
+        background: rgba(76, 73, 73, 0.994);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
 
-    /*Attaches the footer to the bottom and centers it*/
+    /* Footer box for spacing */
     footer {
         text-align: center;
-        background-color: #ff0000;
-        color: #FFF;
-        padding: 10px 0;
         position: fixed;
         bottom: 0;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        
     }
 
-    /* Sizes the box for portfolio items */
-    .portfolio-item {
-        width: calc(33.33% - 20px);
+    /* Inner footer box */
+    .copyright {
+        backdrop-filter: blur(10px);
+        color: white;
+        display: inline-block;
+        padding: 10px;
         margin: 10px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(246, 35, 35, 0.9);
     }
 
-    /* Sizes the images for the portfolio images */
-    .portfolio-item img {
-        width: 100%; 
-        height: auto; 
+    /* Work Container */
+    #work-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Work Items */
+    .work-item {
+        width: calc(33.333%);
+        height: 100%;
+        max-width: 300px;
+        margin: 20px;
+        aspect-ratio: 1 / 1.5;
+        perspective: 1000px;
+        position: relative;
+        transform-style: preserve-3d;
+        display: flex;
+        transition: transform 0.6s;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+    }
+
+    .front, .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+    }
+
+    .back {
+        background: #f0f0f0;
+        transform: rotateY(180deg);
+    }
+
+    .flipped {
+        transform: rotateY(180deg);
+    }
+
+    /* Work Item Images */
+    .work-item img {
+        width: 100%;
+        height: auto;
         border-bottom: 1px solid #ccc;
     }
 
-    /* Resize images for portfolio with changing window size */
-    @media (max-width: 800px) {
-        .portfolio-item {
-            width: calc(50% - 20px);
+    /* Featured Image */
+    .featured-image {
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+        min-width: 200px;
+        border-radius: 30px;
+        border-style: solid;
+    }
+
+    /* Responsive resizing */
+    @media (max-width: 720px){
+        .featured-image {
+            border-radius: 14px;
+        }
+
+        .work-item {
+            width: calc(90%);
         }
     }
 
-    /* Size the featured image */
-    .featured-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 30%;
-        border-radius: 20pt;
-    }
 </style>
 
 <script>
-    /* Add portfolio items */
+    // Add portfolio items
     document.addEventListener('DOMContentLoaded', function() {
-        const portfolioData = [
-            { id: 1, name: "Abercrombie & Fitch", cat: "work-history", source: "images/a&f.png", about: "Sales representative and brand embassador." },
-            { id: 2, name: "Ark Roofing", cat: "work-history", source: "images/ark.png", about: "Receptionist." },
-            { id: 3, name: "FedEx Express", cat: "work-history", source: "images/fedex.jpeg", about: "Forklift operator and package handler." },
-            { id: 4, name: "DBD Microblog", cat: "projects", source: "images/dbd_home.png", about: "A blog for the video game Dead by Daylight" },
-            { id: 5, name: "Women in Herpetology", cat: "projects", source: "images/wih.png", about: "A website for the women in herpetology database." },
-            { id: 6, name: "Mental Health Chatbot", cat: "research", source: "images/mental_health.png", about: "Research into using sentiment analysis to cautiously diagnose potential mental illness." },
-        ];
+    const portfolioData = [
+        { id: 1, name: "Abercrombie & Fitch", cat: "work-history", source: "images/a&f.png", title: "Sales representative", details: "Managed inventory, assisted customers, and maintained brand standards." },
+        { id: 2, name: "Ark Roofing", cat: "work-history", source: "images/ark.png", title: "Receptionist", details: "Handled calls, scheduled appointments, and managed customer interactions." },
+        { id: 3, name: "FedEx Express", cat: "work-history", source: "images/fedex.jpeg", title: "Forklift operator", details: "Loaded/unloaded packages, operated forklifts, and ensured logistics efficiency." },
+        { id: 4, name: "DBD Microblog", cat: "projects", source: "images/dbd_home.png", about: "A blog for the video game Dead by Daylight", details: "Developed a blog using modern web technologies to discuss game strategies and updates." },
+        { id: 5, name: "Women in Herpetology", cat: "projects", source: "images/wih1.png", about: "A website for the women in herpetology database.", details: "Designed a website highlighting contributions of women in the herpetology field. Visit the website <a href='https://womeninherpetology-directory-927c7ee7d389.herokuapp.com/women'>here</a>." },
+        { id: 6, name: "Mental Health Chatbot", cat: "research", source: "images/mental_health.png", about: "Research into using sentiment analysis to cautiously diagnose potential mental illness.", details: "Studied sentiment analysis and AI techniques to assess mental health trends." }
+    ];
 
-        const portfolioContainer = document.getElementById('portfolio-items');
-        const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioContainer = document.getElementById('work-items');
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-        /* Show the portfolio items */
-        function renderItems(filter = 'all') {
-            portfolioContainer.innerHTML = '';
-            portfolioData.filter(item => filter === 'all' || item.cat === filter)
-                        .forEach(item => {
-                            const html = `<div class="portfolio-item" data-category="${item.cat}">
-                                            <img src="${item.source}" alt="${item.name}" />
-                                            <h3>${item.name}</h3>
-                                            <p>${item.about}</p>
-                                        </div>`;
-                            portfolioContainer.innerHTML += html;
-                        });
-        }
+    // Format and function for portfolio items
+    function renderItems(filter = 'all') {
+    portfolioContainer.innerHTML = '';
+    portfolioData
+        .filter(item => filter === 'all' || item.cat === filter)
+        .forEach(item => {
+            const nameOrTitle = item.title ? `<h4>${item.title}</h4>` : `<h4>${item.name || ''}</h4>`;
+            const titleOrNone = item.title ? `<h4>${item.title}</h4>`: '';
+            const details = `<p>${item.details}</p>`;
 
-        /* Start with all items */
-        renderItems();
+            const html = `
+            <div class="work-item" data-category="${item.cat}">
+                    <div class="front">
+                        <img src="${item.source}" alt="${item.name}" />
+                        <h3> ${nameOrTitle}</h3>
+                    </div>
+                    <div class="back">
+                        <h3>${item.name}</h3>
+                        ${titleOrNone}
+                        ${details}
+                    </div>
 
-        /* Event listeners for filters */
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.getAttribute('data-filter');
-                renderItems(filter);
-            });
+            </div>`;
+            portfolioContainer.innerHTML += html;
+        });
+
+    // Reattach event listeners every time items are filtered
+    document.querySelectorAll('.work-item').forEach(item => {
+        item.addEventListener('click', () => item.classList.toggle('flipped'));
+    });
+}
+
+    // Show portfolio items
+    renderItems();
+
+    // Filter buttons event listeners
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+            renderItems(filter);
         });
     });
+});
+
+
 </script>
