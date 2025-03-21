@@ -23,7 +23,7 @@
             <section id="about">
                 <img src="images/self_image.JPG" alt="Tori Mayhall" class="featured-image">
                 <h2>About</h2>
-                <p>Welcome! I'm a computer science graduate with a passion for web development. My journey into the world of technology began with a fascination for photography and sound engineering, fueled by my love for exploration and music as a guitarist, drummer, and music producer. It wasn’t until I created my first web application through an elective class in college that I was drawn into the realm of computer science. I invite you to explore my work, from helpful website creations to impactful AI research, showcasing my dedication to quality and making a meaningful impact in the world of technology.</p>
+                <p>Welcome! I'm a computer science graduate with a passion for web development. My journey into the world of technology began with a fascination for photography and sound engineering, fueled by my love for exploration and music as a guitarist, drummer, and music producer. It wasn’t until I created my first web application through an elective class in college that I was drawn into the realm of computer science. I invite you to explore my work, from helpful website creations to impactful AI research showcasing my dedication to quality and making a meaningful impact in the world of technology.</p>
             </section>
         </div>
     
@@ -50,22 +50,47 @@
             <!-- Skills section -->
             <section id="skills">
                 <h2>Skills</h2>
-                <p>
-                    <ul>
-                        <li>Python</li>
-                        <li>Ruby</li>
-                        <li>SQL</li>
-                        <li>CSS</li>
-                        <li>QA Testing</li>
-                        <li>Figma</li>
-                        <li>Lucidchart</li>
-                        <li>JavaScript</li>
-                        <li>Google Buckets</li>
-                        <li>HTML</li>
-                        <li>Django</li>
-                        <li>Swift</li>
-                    </ul>
-                </p>
+                <div class="skill-icons">
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/css.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/django.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/figma.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/googlecloud.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/html.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/javascript.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/lucidchart.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/postgresql.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/python.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/qa.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/rails.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/ruby.png"></img>
+                    </div>
+                    <div class="skill-icon-item">
+                        <img src="images/skills-icons/swift.svg"></img>
+                    </div>
+                </div>
             </section>
         </div>
     
@@ -73,17 +98,17 @@
             <!-- Contact section -->
             <section id="contact">
                 <h2>Contact Me</h2>
-                <div class="socials">
-                    <div class="social-item">
+                <div class="social-icons">
+                    <div class="social-icon-item">
                         <a href="https://linkedin.com/in/victoria-mayhall-a080312b5", alt="LinkedIn" ><img src="images/social-icons/LinkedIn-Black.png"></a>
                     </div>
-                    <div class="social-item">
+                    <div class="social-icon-item">
                         <a href= "https://t.me/torimayhall", alt="Telegram"><img src="images/social-icons/Telegram.png"></a>
                     </div>
-                    <div class="social-item">
+                    <div class="social-icon-item">
                         <a href="mailto:mayhallvictoria@gmail.com", alt="Gmail"><img src="images/social-icons/Gmail.png"></a>
                     </div>
-                    <div class="social-item">
+                    <div class="social-icon-item">
                         <a href= "https://github.com/imnobodysoyeah", alt="GitHub"><img src="images/social-icons/GitHub.png"></a>
                     </div>
                 </div>
@@ -160,8 +185,9 @@
 
     /* Filter Buttons */
     .filter-btn {
-        margin: 5px;
+        margin: 10px;
         padding: 10px;
+        font-size: 15px;
         cursor: pointer;
         border-radius: 14px;
         color: white;
@@ -202,7 +228,7 @@
 
     /* Work Items */
     .work-item {
-        width: calc(33.333%);
+        width: 33.333%;
         height: 100%;
         max-width: 300px;
         margin: 20px;
@@ -258,14 +284,14 @@
         border-style: solid;
     }
 
-    /* Socials Container */
-    .socials {
+    /* Social Icon Container */
+    .social-icons {
         display: flex;
         justify-content: center;
     }
 
-    .social-item {
-        width: calc(15%);
+    .social-icon-item {
+        width: 15%;
         max-width: 60px;
         margin: 5%;
         aspect-ratio: 1 / 1;
@@ -274,7 +300,27 @@
         padding: 10px;
     }
 
-    .social-item img{
+    .social-icon-item img{
+        width: 100%;
+    }
+
+    /* Skill Icon Container */
+    .skill-icons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-icon-item {
+        max-width: 60px;
+        margin: 5%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        align-items: center;
+    }
+
+    .skill-icon-item img{
         width: 100%;
     }
 
@@ -285,10 +331,10 @@
         }
 
         .work-item {
-            width: calc(90%);
+            width: 90%;
         }
 
-        .social-item {
+        .icon-item {
             min-width: 40px;
         }
     }
